@@ -1,0 +1,52 @@
+@font-face {
+	font-family: "GameBoy";
+	src: url("GameBoy.ttf") format("truetype");
+	font-weight: normal;
+}
+
+body {
+	font-family: "GameBoy", "Courier New";
+}
+
+.header img{
+	float: left;
+	width: 100px;
+	height: 100px;
+
+}
+
+.header h1{
+	position: relative;
+	left: 50px;
+	font-size: 36px;
+	
+}
+
+.header h2{
+	float: right;
+	position: relative;
+	top: -60px;
+	right: 20px;
+}
+
+.header {
+	background: grey;
+	border-style: solid;
+	border-width: 3px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 50px;
+}
+
+table, td {
+
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 10px;
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+
+}
