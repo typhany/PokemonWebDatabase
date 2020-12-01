@@ -1,6 +1,8 @@
 # Pokemon Web Database
 Fall 2020 INF 133 Final Project
+<br>
 Tiffany Kong 93065152
+<br>
 Ashley Teves 10177429
 
 ## Overview
