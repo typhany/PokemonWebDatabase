@@ -50,3 +50,39 @@ table, td {
 	margin-right:auto;
 
 }
+
+
+
+
+.headerpage a:link {
+	text-decoration: none;
+}
+
+.headerpage a:visited {
+	color: black;
+}
+
+.headerpage a:hover{
+	color: white;
+}
+
+
+.search input {
+	width: 25%;
+	padding: 8px 10px;
+	margin: 8px 0;
+	height: 10%;
+	font-size: 15px;
+	font-family: "GameBoy";
+}
+
+.search button{
+	font-family: "GameBoy";
+	padding: 10px 32px;
+	text-align: center;
+	
+}
+
+.search {
+	text-align: center;
+}
