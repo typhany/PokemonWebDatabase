@@ -79,6 +79,7 @@ table, td {
 	font-family: "GameBoy";
 	padding: 10px 32px;
 	text-align: center;
+	cursor: pointer;
 	
 }
 
@@ -87,12 +88,23 @@ table, td {
 }
 
 
-.results {
+
+tr.pokemon button {
+	margin: 12px;
 	border-radius: 15px;
-	background-clip: padding-box;
-	/* border: 1px solid black; */
+}
+
+
+
+tr.pokemon button:hover{
+	cursor: pointer;
+	background:lightgrey;
 
 }
+tr.pokemon td {
+	border-radius: 15px;
+}
+
 
 .poke_pic img {
 	float: left;
