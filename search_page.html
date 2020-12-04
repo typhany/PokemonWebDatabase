@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemon Web Database Search Page</title>
+    <link href = "style.css" rel = "stylesheet" type = "text/css"/>
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src=" https://unpkg.com/pokeapi-js-wrapper@1.2.0/dist/index.js "></script>
+    <script src = "search_page.js"></script>
+</head>
+
+
+<body>
+    <div class = "header">
+		<img src = "pokeball.png" alt = "pokeball logo"/>
+		<h1 class = "headerpage"> <a href = "home_page.html">Gen 1 Pokedex </a></h1>
+    </div>
+    <div class = "search">
+        
+        <input id = "searchpokemon" type = "text" placeholder="Search By Name or ID">
+        <button type = "submit" onclick="findPokemon();">Search </button>
+
+        <p id = "error"></p>
+        <table id = "results">
+            <tbody>
+            </tbody>
+        </table>
+
+        
+    </div>
+
+    <!-- <div id = "pokemon_buttons"></div> -->
+  
+</body>
