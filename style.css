@@ -87,5 +87,33 @@ table, td {
 }
 
 
+.results {
+	border-radius: 15px;
+	background-clip: padding-box;
+	/* border: 1px solid black; */
+
+}
+
+.poke_pic img {
+	float: left;
+	width: 300px;
+	height: 300px;
+
+}
 
 
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
