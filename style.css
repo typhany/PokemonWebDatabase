@@ -117,3 +117,19 @@ table, td {
   display: table;
   clear: both;
 }
+
+#pokemon_table {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#pokemon_table button {
+	font-family: "GameBoy";
+	width: auto;
+	height: auto;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}

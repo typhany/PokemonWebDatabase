@@ -52,9 +52,9 @@ function getPokemonData(pokemon){
 			var pokemon_name = pokemon_info.name;
 			var pokemon_sprite = pokemon_info.sprites.front_default;
 
-			$("#pokemon_table").append("<tr><td>" + 
+			$("#pokemon_table").append("<button>" + //add function to get to pokmeon_page.html laters
 				                        "<img src = " + pokemon_sprite + " alt = " + pokemon_name +  "></img><br>" +
-				                        "#" + pokemon_id + " " + pokemon_name + "</td></tr>");
+				                        "#" + pokemon_id + " " + pokemon_name + "</button>");
 
 
 		
