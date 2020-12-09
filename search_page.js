@@ -1,32 +1,39 @@
 
-const P = new Pokedex.Pokedex();
-// var all_pokemon = [];
+
 var current_pokemon = null;
+var all_pokemon = [];
+
+
 
 
 function findPokemon(){
-    
-    $('#results tr').remove();
-    // $('#pokemon_buttons').remove();
     $('#error').empty();
-
-
-        P.getPokemonByName($('#searchpokemon').val()).then(response =>{
-            console.log(response);
-
-            
-            var image = "<img src = " + response.sprites.front_default + " alt = " + response.name+  "></img>";
-            $('#results tbody').after( "<tr class = 'pokemon'><td>" + "<a href = 'pokemon_page.html'>" + 
-            "<button onclick = 'accessPokemonPage(' " + response.id + " );' " +
-             " id = " + response.id + " value = " +response.name + ">" + image +"</button><br></a>"+ response.name + " #" + response.id + " </td></tr>");
-
-        })
-    
-        .catch( (err) =>{
-            $('#error').text( "Incorrect Search, Try Again");
-        });
+    $('#results td').remove();
 
    
+    var counter = 0;
+    var pokemon = $('#searchpokemon').val();
+
+    if(  parseInt(pokemon) - 1 in all_pokemon){
+        getPokemonByName(all_pokemon[ parseInt(pokemon) - 1]);
+        counter += 1;
+    }
+
+    for(var i = all_pokemon.length-1; i >=0; i--){
+ 
+        if( all_pokemon[i].name.includes(pokemon)){
+            if(counter == 4){
+                $('#results tbody').before("<tr></tr>");
+            }
+            getPokemonByName(all_pokemon[i]);
+            
+            counter += 1;
+        }
+        
+    }
+    if(counter == 0){
+        $('#error').text("Incorrect Search, Try Again");
+    }
 }
 
 function accessPokemonPage(id){
@@ -34,60 +41,56 @@ function accessPokemonPage(id){
 }
 
 
-async function getAllPokemons(){
-    var all_pokemon = [];
-    // P.getGenerationByName("generation-i").then(response =>{
-    //     console.log(response.pokemon_species);
-    //     for(var i in response.pokemon_species){
-    //         if(response.pokemon_species[i].name){
-    //             all_pokemon.push(response.pokemon_species[i].name);
-    //         }
+
+
+function getAllPokemon(){
+	fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+		.then(response => response.json())
+		.then(function(pokemon_list) {
+			for (var i in pokemon_list.results)
+			{
+                all_pokemon.push(pokemon_list.results[i]);
+
+			}
+        })
+
+
+
+   
+    
+}
+
+function getPokemonByName(pokemon){
+    
+   
+   
+	fetch(pokemon.url)
+		.then(response => response.json())
+		.then(function(pokemon_info) {
+			var pokemon_id = pokemon_info.id;
+			var pokemon_name = pokemon_info.name;
+            var pokemon_sprite = pokemon_info.sprites.front_default;
             
-    //     }
+
+            var image = "<img src = " + pokemon_sprite + " alt = " + pokemon_name+  "></img>";
+
+            
+
+            $('#results tr').last().after( "<td><form action = 'pokemon_page.html' >" + 
+            "<button type = 'submit' onclick = 'accessPokemonPage(' " + pokemon_id + " );' " +
+             " id = " + pokemon_id+ " value = " + pokemon_name + ">" + image + "<br>" +
+             "#" + pokemon_id+ " " + pokemon_name+ "</button></form></td>");
+
+
+     
+        })
+       
         
-    //     console.log(all_pokemon);
-    //     // return all_pokemon;
-        
-    // })
-    // console.log(all_pokemon);
-
-
-    const response = await P.getGenerationByName("generation-i");
-
-
-    for(var i in response.pokemon_species){
-        if(response.pokemon_species[i].name){
-            all_pokemon.push(response.pokemon_species[i].name);
-        }
-        
-    }
-    // console.log(all_pokemon);
-
-    return all_pokemon;
-
-
-
-    // const golduck = await P.getPokemonByName("golduck");
-    // all_pokemon.push(golduck);
-    // console.log(all_pokemon);
 }
 
 
 
 
-
-
-
 $(document).ready(function() {
-    // const options = {
-    //     protocol: "https",
-    //     cache: true,
-    //     timeout: 5 * 1000, // 5s
-    //     cacheImages: true
-    //   }
-    // const P = new Pokedex.Pokedex();
-    console.log(getAllPokemons());
-    // console.log( all_pokemon);
-
-
+    getAllPokemon();
 });
