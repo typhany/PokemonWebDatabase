@@ -8,25 +8,22 @@ var all_pokemon = [];
 
 function findPokemon(){
     $('#error').empty();
-    $('#results td').remove();
+    $('#results').empty();
 
    
     var counter = 0;
     var pokemon = $('#searchpokemon').val();
+    console.log(pokemon);
 
     if(  parseInt(pokemon) - 1 in all_pokemon){
         getPokemonByName(all_pokemon[ parseInt(pokemon) - 1]);
         counter += 1;
     }
 
-    for(var i = all_pokemon.length-1; i >=0; i--){
+    for(var i in all_pokemon){
  
         if( all_pokemon[i].name.includes(pokemon)){
-            if(counter == 4){
-                $('#results tbody').before("<tr></tr>");
-            }
             getPokemonByName(all_pokemon[i]);
-            
             counter += 1;
         }
         
@@ -52,18 +49,10 @@ function getAllPokemon(){
                 all_pokemon.push(pokemon_list.results[i]);
 
 			}
-        })
-
-
-
-   
-    
+        })    
 }
 
 function getPokemonByName(pokemon){
-    
-   
-   
 	fetch(pokemon.url)
 		.then(response => response.json())
 		.then(function(pokemon_info) {
@@ -74,12 +63,10 @@ function getPokemonByName(pokemon){
 
             var image = "<img src = " + pokemon_sprite + " alt = " + pokemon_name+  "></img>";
 
-            
-
-            $('#results tr').last().after( "<td><form action = 'pokemon_page.html' >" + 
+            $('#results').append( "<form action = 'pokemon_page.html' >" + 
             "<button type = 'submit' onclick = 'accessPokemonPage(' " + pokemon_id + " );' " +
              " id = " + pokemon_id+ " value = " + pokemon_name + ">" + image + "<br>" +
-             "#" + pokemon_id+ " " + pokemon_name+ "</button></form></td>");
+             "#" + pokemon_id+ " " + pokemon_name+ "</button></form>");
 
 
      

@@ -82,51 +82,24 @@ body {
 	text-align: center;
 }
 
-
+ 
 
 #results form {
 	display: inline-block; 
-	text-align: center;
+	margin-left: 100px;
 	
-}
+} 
 
 #results form,  button{
-	margin: 12px;
-	text-align: center;
+	margin: 8px;
 	border-radius: 15px;
 
-}
+} 
 
 
 
 
-table, td {
-	border-collapse: collapse;
-	text-align: center;
-	margin-left:auto;
-	margin-right:auto;
-	width:100px; 
-	word-wrap:break-word;
 
-}
-
-
-/* 
-tr.pokemon button {
-	margin: 12px;
-	border-radius: 15px;
-}
-
-
-
-tr.pokemon button:hover{
-	cursor: pointer;
-	background:lightgrey;
-
-}
-tr.pokemon td {
-	border-radius: 15px;
-} */
 
 
 
