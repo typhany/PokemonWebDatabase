@@ -1,9 +1,4 @@
-
-
-var current_pokemon = null;
 var all_pokemon = [];
-
-
 
 
 function findPokemon(){
@@ -37,8 +32,7 @@ function findPokemon(){
 }
 
 function accessPokemonPage(id){
-    var current_pokemon = document.getElementById(id).value;
-    
+    localStorage.setItem(document.getElementById(id).value, document.getElementById(id).value);    
 }
 
 
@@ -68,10 +62,10 @@ function getPokemonByName(pokemon){
             var image = "<img src = " + pokemon_sprite + " alt = " + pokemon_name+  "></img>";
 
             $('#results').append( "<a href = 'pokemon_page.html' >" + 
-            "<button type = 'submit' onclick = 'accessPokemonPage(' " + pokemon_id + " );' " +
+            "<button type = 'submit' onclick = 'accessPokemonPage( " + pokemon_id + " );' " +
              " id = " + pokemon_id+ " value = " + pokemon_name + ">" + image + "<br>" +
              "#" + pokemon_id+ " " + pokemon_name+ "</button></a>");
-
+           
 
      
         })
@@ -84,4 +78,5 @@ function getPokemonByName(pokemon){
 
 $(document).ready(function() {
     getAllPokemon();
+
 });

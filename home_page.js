@@ -1,4 +1,6 @@
 
+import {current_pokemon2} from './search_page.js'
+var current_pokemon = null;
 
 function getAllPokemon(){
 	fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
@@ -20,15 +22,24 @@ function getPokemonData(pokemon){
 			var pokemon_name = pokemon_info.name;
 			var pokemon_sprite = pokemon_info.sprites.front_default;
 
-			$("#pokemon_table").append("<button>" + //add function to get to pokmeon_page.html laters
-				                        "<img src = " + pokemon_sprite + " alt = " + pokemon_name +  "></img><br>" +
-				                        "#" + pokemon_id + " " + pokemon_name + "</button>");
+			$("#pokemon_table").append( "<a href = 'pokemon_page.html' >" + 
+				"<button type = 'submit' onclick = 'accessPokemonPage(' " + pokemon_id + " );' " +
+				" id = " + pokemon_id+ " value = " + pokemon_name + ">" +
+				"<img src = " + pokemon_sprite + " alt = " + pokemon_name +  "></img><br>" +
+				"#" + pokemon_id + " " + pokemon_name + "</button></a>");
 
 
 		
 		})
 }
 
+
+function accessPokemonPage(id){
+    var current_pokemon = document.getElementById(id).value;
+    
+}
+
 $(document).ready(function() {
 	getAllPokemon();
+	console.log(current_pokemon2);
 });
