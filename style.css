@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
 	font-family: "GameBoy";
 	src: url("GameBoy.ttf") format("truetype");
@@ -9,7 +10,7 @@ body {
 }
 
 
-/* HEADER */
+/* Header */
 .header img{
 	float: left;
 	width: 100px;
@@ -59,7 +60,7 @@ body {
 
 
 
-/* SEARCH */
+/* Search Page */
 
 .search input {
 	width: 25%;
@@ -84,25 +85,36 @@ body {
 
  
 
-#results form {
-	display: inline-block; 
-	margin-left: 100px;
-	
-} 
 
-#results form,  button{
-	margin: 8px;
-	border-radius: 15px;
-
-} 
+#results  {
+	display: inline-block;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
 
+}
+
+#results button {
+	font-family: "GameBoy";
+	width: auto;
+	height: auto;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#results button:hover{
+	cursor: pointer;
+	background:lightgrey;
+
+}
 
 
 
 
 
-
+/* Pokemon Page */
 .poke_pic img {
 	float: left;
 	width: 300px;
@@ -110,10 +122,10 @@ body {
 
 }
 
-
 * {
-  box-sizing: border-box;
-}
+	box-sizing: border-box;
+  }
+  
 
 .column {
   float: left;
@@ -125,4 +137,29 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+
+/* Home Page */
+#pokemon_table {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#pokemon_table button {
+	font-family: "GameBoy";
+	width: auto;
+	height: auto;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+#pokemon_table button:hover{
+	cursor: pointer;
+	background:lightgrey;
+
 }

@@ -13,7 +13,10 @@ function findPokemon(){
    
     var counter = 0;
     var pokemon = $('#searchpokemon').val();
-    console.log(pokemon);
+    if(pokemon == ''){
+        $('#error').text("Incorrect Search, Try Again");
+        return;
+    }
 
     if(  parseInt(pokemon) - 1 in all_pokemon){
         getPokemonByName(all_pokemon[ parseInt(pokemon) - 1]);
@@ -35,6 +38,7 @@ function findPokemon(){
 
 function accessPokemonPage(id){
     var current_pokemon = document.getElementById(id).value;
+    
 }
 
 
@@ -63,10 +67,10 @@ function getPokemonByName(pokemon){
 
             var image = "<img src = " + pokemon_sprite + " alt = " + pokemon_name+  "></img>";
 
-            $('#results').append( "<form action = 'pokemon_page.html' >" + 
+            $('#results').append( "<a href = 'pokemon_page.html' >" + 
             "<button type = 'submit' onclick = 'accessPokemonPage(' " + pokemon_id + " );' " +
              " id = " + pokemon_id+ " value = " + pokemon_name + ">" + image + "<br>" +
-             "#" + pokemon_id+ " " + pokemon_name+ "</button></form>");
+             "#" + pokemon_id+ " " + pokemon_name+ "</button></a>");
 
 
      
