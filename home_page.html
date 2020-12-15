@@ -1,58 +1,23 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Pokemon Web Database Home Page</title>
 	<link href = "style.css" rel = "stylesheet" type = "text/css"/>
-	<link href="favicon.ico" rel="icon" type="image/x-icon" />
+	<link href="favicon.ico" rel="icon" type="image/x-icon" /> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src=" https://unpkg.com/pokeapi-js-wrapper@1.2.0/dist/index.js "></script>
     <script src = "home_page.js"></script>
 </head>
 
 <body>
+	<!-- display universal header -->
 	<div class = "header">
 		<img src = "pokeball.png" alt = "pokeball logo"/>
 		<h1 class = "headerpage"> <a href = "home_page.html"> Gen 1 Pokedex</a></h1>
 		<h2 class = "headerpage"><a href = "search_page.html"> Search</a></h2>
 	</div>
-
+	<!-- display all 151 Gen I pokemons as buttons on a grid -->
 	<div id = "pokemon_table">
-		<!-- append pokemon buttons here -->
 	</div>
-<!-- 	<table class = "pokemon" id = "pokemon_table">
-		<tr>
-			<td>pokemon 1</td>
-			<td>pokemon 2</td>
-		</tr>
-		<tr>
-			<td>pokemon 3</td>
-			<td>pokemon 4</td>
-		</tr>
-	</table> -->
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
-
-<!-- psuedo-code
->>> poke_num = 1
->>> while poke_num < 151:
-	for i in range(10):
-		print("<tr>")
-		for j in range(15):
-			print("<td> pokemon", poke_num, "</td>")
-			#include link to pokemon page
-			poke_num += 1
-	print("</tr>")
-
->>include loner 151st pokemon -->

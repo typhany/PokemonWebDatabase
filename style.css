@@ -34,7 +34,7 @@ body {
 
 .header {
 	background: grey;
-	border-style: solid;
+	/*// border-style: solid;*/
 	border-width: 3px;
 	padding-bottom: 20px;
 	padding-top: 20px;
@@ -95,8 +95,8 @@ body {
 
 #results button {
 	font-family: "GameBoy";
-	width: auto;
-	height: auto;
+	width: 200px;
+	height: 200px;
 	border-radius: 10px;
 	margin-bottom: 10px;
 	margin-top: 10px;
@@ -115,7 +115,7 @@ body {
 
 
 /* Pokemon Page */
-.poke_pic img {
+#poke_pic img {
 	float: left;
 	width: 300px;
 	height: 300px;
@@ -129,7 +129,7 @@ body {
 
 .column {
   float: left;
-  width: 50%;
+  width: 33.33%;
   padding: 10px;
 }
 
@@ -140,6 +140,11 @@ body {
 }
 
 
+#poke_description {}
+
+
+
+
 /* Home Page */
 #pokemon_table {
 	display: grid;
@@ -148,8 +153,8 @@ body {
 
 #pokemon_table button {
 	font-family: "GameBoy";
-	width: auto;
-	height: auto;
+	width: 200px;
+	height: 200px;
 	border-radius: 10px;
 	margin-bottom: 10px;
 	margin-top: 10px;

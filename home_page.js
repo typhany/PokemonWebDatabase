@@ -1,6 +1,3 @@
-
-
-
 function getAllPokemon(){
 	fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
 		.then(response => response.json())
@@ -27,8 +24,6 @@ function getPokemonData(pokemon){
 				"<img src = " + pokemon_sprite + " alt = " + pokemon_name +  "></img><br>" +
 				"#" + pokemon_id + " " + pokemon_name + "</button></a>");
 
-
-		
 		})
 }
 

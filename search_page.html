@@ -11,26 +11,18 @@
 
 
 <body>
+    <!-- display universal header -->
     <div class = "header">
 		<img src = "pokeball.png" alt = "pokeball logo"/>
 		<h1 class = "headerpage"> <a href = "home_page.html">Gen 1 Pokedex </a></h1>
     </div>
+    <!-- display search for user input -->
     <div class = "search">
-        
         <input id = "searchpokemon" type = "text" placeholder="Search By Name or ID">
         <button type = "submit" onclick="findPokemon();">Search </button>
-
+        <!-- display results of correct and incorrect input -->
         <p id = "error"></p>
         <div id = "results">
-            <!-- <tbody>
-                <tr></tr>
-            </tbody> -->
-
         </div>
-        
-        
-    </div>
-
-    <!-- <div id = "pokemon_buttons"></div> -->
-  
+    </div>  
 </body>
