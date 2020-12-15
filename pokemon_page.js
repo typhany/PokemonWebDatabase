@@ -7,8 +7,6 @@ function getPokemonDetails(pokemon_name) {
 		fetch("https://pokeapi.co/api/v2/pokemon/" + pokemon_name)
 		.then(response => response.json())
 		.then(function(pokemon_details) {
-			console.log(pokemon_details);
-
 			var name = pokemon_details.name;
 			var id = pokemon_details.id;
 			var weight = (pokemon_details.weight * 0.220462).toFixed(1); //hectograms to lbs
@@ -69,11 +67,8 @@ function getPokemonDetails(pokemon_name) {
 
 
 $(document).ready(function(){
+	// Found by Ashley: https://www.w3schools.com/html/html5_webstorage.asp
     pokemon = localStorage.getItem(localStorage.key(0));
-    console.log(localStorage.getItem(localStorage.key(0)));
     localStorage.clear();
-
     getPokemonDetails(pokemon);
-    
-    test();
 });

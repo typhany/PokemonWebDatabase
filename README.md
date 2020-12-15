@@ -18,9 +18,9 @@ We intend to build a web database for the original 151 first-generation Pokemon 
 * https://www.geeksforgeeks.org/how-to-create-an-html-button-that-acts-like-a-link/
 
 ## Flow
-User first arrives to the home page of the Pokemon Web Database
+User begins with home page of the Pokemon Web Database
 1. Home Page<br>
-    a) All 151 pokemons from Gen I are displayed as buttons on a 26 x 25 grid<br>
+    a) All 151 pokemon from Gen 1 are displayed as buttons on a 26 x 25 grid<br>
     b) Clicking on any pokemon will navigate to that pokemon's information page<br>
     c) User may click the "Search" button to be navigated to the pokedex's search engine<br>
     d) User may click the "Gen 1 Pokedex" button to be navigated to the home page <br>

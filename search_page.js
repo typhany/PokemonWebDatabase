@@ -1,4 +1,4 @@
-// store all pokemons from gen I
+// store all pokemons from gen 1
 var all_pokemon = [];
 
 
@@ -37,13 +37,15 @@ function findPokemon(){
 }
 
 // store the pokemon to storage to view in pokemon page
+// Found by Ashley: https://www.w3schools.com/html/html5_webstorage.asp
 function accessPokemonPage(id){
     localStorage.setItem(document.getElementById(id).value, document.getElementById(id).value);    
 }
 
 
 
-// fetch from Web API to fill in pokemon array with all pokemons from gen I
+// fetch from Web API to fill in pokemon array with all pokemons from gen 1
+// Found by Tiffany: https://medium.com/@sergio13prez/fetching-them-all-poke-api-62ca580981a2
 function getAllPokemon(){
 	fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
 		.then(response => response.json())
@@ -56,6 +58,7 @@ function getAllPokemon(){
 }
 
 // fetch from Web API to get pokemon by name
+// Found by Tiffany: https://medium.com/@sergio13prez/fetching-them-all-poke-api-62ca580981a2
 function getPokemonByName(pokemon){
 	fetch(pokemon.url)
 		.then(response => response.json())
@@ -66,6 +69,9 @@ function getPokemonByName(pokemon){
             // create image tag
             var image = "<img src = " + pokemon_sprite + " alt = " + pokemon_name+  "></img>";
             // create pokemon button and the link to navigate to the page with pokemon info.
+            // Found by Ashley: https://www.geeksforgeeks.org/how-to-create-an-html-button-that-acts-like-a-link/
+            // Found by Tiffany: https://freshman.tech/css-grid-calculator/,
+            // https://www.digitalocean.com/community/tutorials/css-css-grid-layout-fr-unit
             $('#results').append( "<a href = 'pokemon_page.html' >" + 
             "<button type = 'submit' onclick = 'accessPokemonPage( " + pokemon_id + " );' " +
              " id = " + pokemon_id+ " value = " + pokemon_name + ">" + image + "<br>" +
