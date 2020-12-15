@@ -19,19 +19,19 @@ We intend to build a web database for the original 151 first-generation Pokemon 
 
 ## Flow
 User first arrives to the home page of the Pokemon Web Database
-1. Home Page
-    a) All 151 pokemons from Gen I are displayed as buttons on a 26 x 25 grid
-    b) Clicking on any pokemon will navigate to that pokemon's information page
-    c) User may click the "Search" button to be navigated to the pokedex's search engine
-    d) User may click the "Gen 1 Pokedex" button to be navigated to the home page 
-3. Search Engine
-    a) User may click the "Gen 1 Pokedex" button to return back to the home page 
-    b) User is prompted with a text box entry to search for a pokemon by name or id
-    c) Search results are displayed as buttons on a grid
-    d) Clicking on any pokemon will navigate to that pokemon's information page
-4. Pokemon Page
-    a) User may click the "Gen 1 Pokedex" button to return back to the home page 
-    b) User may click the "Search" button to be navigated to the pokedex's search engine
-    c) All relevant information about that pokemon is displayed
+1. Home Page<br>
+    a) All 151 pokemons from Gen I are displayed as buttons on a 26 x 25 grid<br>
+    b) Clicking on any pokemon will navigate to that pokemon's information page<br>
+    c) User may click the "Search" button to be navigated to the pokedex's search engine<br>
+    d) User may click the "Gen 1 Pokedex" button to be navigated to the home page <br>
+3. Search Engine<br>
+    a) User may click the "Gen 1 Pokedex" button to return back to the home page <br>
+    b) User is prompted with a text box entry to search for a pokemon by name or id<br>
+    c) Search results are displayed as buttons on a grid<br>
+    d) Clicking on any pokemon will navigate to that pokemon's information page<br>
+4. Pokemon Page<br>
+    a) User may click the "Gen 1 Pokedex" button to return back to the home page <br>
+    b) User may click the "Search" button to be navigated to the pokedex's search engine<br>
+    c) All relevant information about that pokemon is displayed<br>
 
 
