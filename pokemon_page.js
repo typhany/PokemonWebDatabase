@@ -1,5 +1,3 @@
-//to add perhaps if we're ambitious: evolution chain
-
 var pokemon = '';
 
 function getPokemonDetails(pokemon_name) {
@@ -18,10 +16,8 @@ function getPokemonDetails(pokemon_name) {
 			var type = pokemon_details.types; //returns an array of types
 			var species = pokemon_details.species; //returns an array of species
 			var abilities = pokemon_details.abilities; //returns array of abilities
-			var moves = pokemon_details.moves; //returns array of moves
-
-			
-			var stats = pokemon_details.stats;
+			var moves = pokemon_details.moves; //returns array of moves	
+			var stats = pokemon_details.stats; //returns array of stats
 
 			//pokemon name, id, weight, height
 			$("#poke_description").append("<h2> NAME: " + name + "</h2>");
@@ -52,7 +48,7 @@ function getPokemonDetails(pokemon_name) {
 			}
 
 
-			//moves (might wanna make this a separate column?)
+			//moves
 			$("#moves_list").append("<h3> MOVES: </h3>");
 			for (var i in moves) 
 			{
