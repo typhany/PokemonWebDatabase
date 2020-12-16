@@ -24,7 +24,7 @@ User begins with home page of the Pokemon Web Database
     b) Clicking on any pokemon will navigate to that pokemon's information page<br>
     c) User may click the "Search" button to be navigated to the pokedex's search engine<br>
     d) User may click the "Gen 1 Pokedex" button to be navigated to the home page <br>
-3. Search Engine<br>
+3. Search Page<br>
     a) User may click the "Gen 1 Pokedex" button to return back to the home page <br>
     b) User is prompted with a text box entry to search for a pokemon by name or id<br>
     c) Search results are displayed as buttons on a grid<br>
