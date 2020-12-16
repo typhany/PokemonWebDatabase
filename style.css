@@ -39,6 +39,7 @@ body {
 }
 .headerpage a:link {
 	text-decoration: none;
+	color: black;
 }
 .headerpage a:visited {
 	color: black;
