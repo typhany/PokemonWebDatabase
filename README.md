@@ -9,8 +9,9 @@ Ashley Teves 10177429
 We intend to build a web database for the original 151 first-generation Pokemon with HTML, CSS, and JavaScript. This web database will be created for the purpose of helping avid fans of Pokemon search and filter specific Pokemon in the database as well as reminisce their childhood with the original Pokemon. They will be able to view statistics and descriptions of their favorite Pokemon or gain more knowledge about a specific Pokemon.
 
 ## Flow
+Link to Pokemon WebPage (Hosted by GitHub): https://typhany.github.io/PokemonWebDatabase/
 User begins with home page of the Pokemon Web Database
-1. Home Page<br>
+1. Home Page (Index) <br>
     a) All 151 pokemon from Gen 1 are displayed as buttons on a 26 x 25 grid<br>
     b) Clicking on any pokemon will navigate to that pokemon's information page<br>
     c) User may click the "Search" button to be navigated to the pokedex's search engine<br>
